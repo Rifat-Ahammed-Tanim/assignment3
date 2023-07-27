@@ -21,30 +21,31 @@
 </head>
 
 <body class="font-lato">
-    <header class="`container md:w-[80%]  mx-auto p-3 mt-12 bg-[#F85559] rounded-full">
-        <!--------- nav bat --------->
+    <!-- navbar -->
+    <header class="container md:w-[80%] mx-auto p-3 mt-12 bg-[#F85559] rounded-full">
         <nav>
-            <section class="flex flex-col xl:flex-row justify-between h-16 items-center p-5">
-                <di class="text-white text-lg">
+            <section class="flex md:flex-row justify-between xl:h-16 h-auto items-center p-5">
+                <div class="text-white text-lg hidden xl:block">
                     <a class="px-3" href="">Home</a>
                     <a class="px-3" href="">About Us</a>
                     <a class="px-3" href="">Shop</a>
                     <a class="px-3" href="">All Fruits</a>
-                </di>
-                <di class="flex justify-center items-center text-white">
+                </div>
+                <div class="flex justify-center items-center text-white">
                     <img src="images/logo.png" alt="" />
                     <h3 class="ml-3 text-5xl">Fruit Burst</h3>
-                </di>
-                <di>
-                    <div class="search-box relative">
+                </div>
+                <div>
+                    <div class="search-box relative hidden xl:block">
                         <input type="text" placeholder="Search Here"
-                            class="border w-9/12 md:w-[300px] h-9 pl-5 rounded-full" />
+                            class="border w-9/12 md:w-96 h-9 pl-5 rounded-full" />
                         <i class="bi bi-search absolute bottom-1.5 right-4"></i>
                     </div>
-                </di>
-
+                </div>
+                <div class="menu text-white text-3xl block md:block xl:hidden">
+                    <i class="bi bi-list"></i>
+                </div>
             </section>
-
         </nav>
     </header>
     <!-- carousel section start -->
@@ -370,43 +371,42 @@
         <section class="shop-all flex justify-center w[to-100%] my-16">
             <button class="btn bg-[#F85559] text-white hover:bg-green-700">Shop All</button>
         </section>
-      <!--------------- Meet the team section ---------------->
-      <section class="section-3 mx-auto">
-        <div class="section-3-child">
-          <header class="my-8 text-center pt-10 text-white w-[50%] mx-auto">
-            <h1 class="text-5xl">Meet the team section</h1>
-            <p class="mt-6">
-              Contrary to popular belief, is not simply random text. It has
-              roots in a piece of classical Latin literature from 45 BC, making
-              it over 2000 years old.
-            </p>
-          </header>
-          <section
-            class="w-9/12 mx-auto grid grid-cols-1 h-auto sm:grid-cols-2 md:grid-cols-4 gap-5 sm:h-auto text-white text-center pb-7"
-          >
-            <div class="items-center flex justify-center flex-col">
-              <img class="p-4" src="images/member1.png" alt="" />
-              <h2>Awlad Hossain</h2>
-              <p>Fruits Expert</p>
+        <!--------------- Meet the team section ---------------->
+        <section class="section-3 mx-auto">
+            <div class="section-3-child">
+                <header class="my-8 text-center pt-10 text-white w-[50%] mx-auto">
+                    <h1 class="text-5xl">Meet the team section</h1>
+                    <p class="mt-6">
+                        Contrary to popular belief, is not simply random text. It has
+                        roots in a piece of classical Latin literature from 45 BC, making
+                        it over 2000 years old.
+                    </p>
+                </header>
+                <section
+                    class="w-9/12 mx-auto grid grid-cols-1 h-auto sm:grid-cols-2 md:grid-cols-4 gap-5 sm:h-auto text-white text-center pb-7">
+                    <div class="items-center flex justify-center flex-col">
+                        <img class="p-4" src="images/member1.png" alt="" />
+                        <h2>Awlad Hossain</h2>
+                        <p>Fruits Expert</p>
+                    </div>
+                    <div class="items-center flex justify-center flex-col">
+                        <img class="p-4" src="images/member2.png" alt="" />
+                        <h2>Safia Chowdhury</h2>
+                        <p>Fruits Expert</p>
+                    </div>
+                    <div class="items-center flex justify-center flex-col">
+                        <img class="p-4" src="images/member3.png" alt="" />
+                        <h2>Rokib Hossain</h2>
+                        <p>Fruits Expert</p>
+                    </div>
+                    <div class="items-center flex justify-center flex-col">
+                        <img class="p-4" src="images/member4.png" alt="" />
+                        <h2>Chaity</h2>
+                        <p>Fruits Expert</p>
+                    </div>
+                </section>
             </div>
-            <div class="items-center flex justify-center flex-col">
-              <img class="p-4" src="images/member2.png" alt="" />
-              <h2>Safia Chowdhury</h2>
-              <p>Fruits Expert</p>
-            </div>
-            <div class="items-center flex justify-center flex-col">
-              <img class="p-4" src="images/member3.png" alt="" />
-              <h2>Rokib Hossain</h2>
-              <p>Fruits Expert</p>
-            </div>
-            <div class="items-center flex justify-center flex-col">
-              <img class="p-4" src="images/member4.png" alt="" />
-              <h2>Chaity</h2>
-              <p>Fruits Expert</p>
-            </div>
-          </section>
-        </div>
-      </section>
+        </section>
         <!------ Why Choose Us ------>
         <section>
             <div class="text-center pt-16">
@@ -504,41 +504,27 @@
         </section>
 
     </main>
-    <footer class="footer footer-center p-20 sm:mx-auto bg-black text-base-content text-white rounded">
-        <div class="flex">
-            <img class="items-center" src="images/logo.png" alt="">
-            <h3 class="font-lato font-bold text-3xl">Fruit Burst</h3>
+    <footer class="w-full bg-black pt-32">
+        <div class="flex justify-center items-center text-white">
+            <img src="images/logo.png" alt="" />
+            <h3 class="ml-3 text-5xl">Fruit Burst</h3>
         </div>
-        <div class="grid grid-flow-col gap-8">
-            <a class="link link-hover">Home</a>
-            <a class="link link-hover">About us</a>
-            <a class="link link-hover">Shop</a>
-            <a class="link link-hover">All Fruits</a>
-            <a class="link link-hover">Support</a>
-            <a class="link link-hover">My Account</a>
-        </div>
-        <div>
-            <div class="grid grid-flow-col gap-4">
-                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        class="fill-current">
-                        <path
-                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
-                        </path>
-                    </svg></a>
-                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        class="fill-current">
-                        <path
-                            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
-                        </path>
-                    </svg></a>
-                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        class="fill-current">
-                        <path
-                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
-                        </path>
-                    </svg></a>
-            </div>
-        </div>
+
+        <ul class="flex gap-5 flex-wrap text-white justify-center my-10">
+            <li class="p-4">Home</li>
+            <li class="p-4">About Us</li>
+            <li class="p-4">Shop</li>
+            <li class="p-4">All Fruits</li>
+            <li class="p-4">Support</li>
+            <li class="p-4">My Account</li>
+        </ul>
+        <section class="logo text-white md:w-6/12 sm:w-9/12 flex justify-between mx-auto pb-10">
+            <i class="hover:text-blue-500 text-[30px] bi bi-twitter"></i>
+            <i class="hover:text-blue-500 text-[30px] bi bi-facebook"></i>
+            <i class="hover:text-blue-500 text-[30px] bi bi-youtube"></i>
+            <i class="hover:text-blue-500 text-[30px] bi bi-instagram"></i>
+            <i class="hover:text-blue-500 text-[30px] bi bi-apple"></i>
+        </section>
     </footer>
 </body>
 
